@@ -234,6 +234,19 @@ angular.module('starter.controllers', ['ion-gallery'])
             $scope.classf = "active";
         }
     };
-    
+        	$scope.video = [{
+		image: "img/notification/1.jpg",
+		title: "Notification new event",
+		detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate venenatis faucibus"
+  }, {
+		image: "img/notification/3.jpg",
+		title: "Notification new event",
+		detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate venenatis faucibus"
+  }, {
+		image: "img/notification/5.jpg",
+		title: "Notification new event",
+		detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate venenatis faucibus"
+  }];
+
 
 });

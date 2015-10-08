@@ -146,7 +146,6 @@ p {
     }
 }
 .notitfy {
-    margin-top: 30px;
     margin-bottom: 10px !important;
     color: $calm;
     .item-divider {
@@ -157,6 +156,26 @@ p {
     p {
         margin: 0;
     }
+             .event {
+                
+                .list {
+                    margin: -1px 0px !important;
+                    .item {
+    padding: 10px 0px 10px 0px;
+                           p {
+		        font-size: 12px !important;
+                white-space: initial !important;
+		    }
+		    h2 {
+		        font-size: 14px !important;
+		        line-height: 130%;
+		    }
+} 
+                }
+            }
+            .event {
+    margin-bottom: 20px;
+}
 }
 .menu-list {
     .item {
@@ -623,3 +642,4 @@ p {
         }
     }
 }
+

@@ -42,18 +42,18 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
-    .state('app.team', {
-        url: '/team',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/team.html',
-                controller: 'TeamCtrl'
-            }
-        }
-    })
+//    .state('app.team', {
+//        url: '/team',
+//        views: {
+//            'menuContent': {
+//                templateUrl: 'templates/team.html',
+//                controller: 'TeamCtrl'
+//            }
+//        }
+//    })
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/team');
+    $urlRouterProvider.otherwise('/app/team/detail');
 });
 
 
