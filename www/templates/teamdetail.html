@@ -1,0 +1,142 @@
+<ion-view view-title="Team Details">
+    <ion-content>
+        <div class="head-team">
+            <div class="item item-thumbnail-left" href="#">
+                <img src="img/team-logo/t11.png">
+
+                <span class="item-note"><i class="icon ion-ios-heart"></i></span>
+                <h2>Transform Heroes</h2>
+            </div>
+        </div>
+        <ion-scroll direction="x">
+            <div class="tabs-item">
+                <ul class="tab-item-inner">
+                    <li class="tab-li {{classa}}" ng-click="tabchangemain('about',1)">About</li>
+                    <li class="tab-li {{classb}}" ng-click="tabchangemain('news',2)">News</li>
+                    <li class="tab-li {{classc}}" ng-click="tabchangemain('gallery',3)">Gallery</li>
+                    <li class="tab-li {{classd}}" ng-click="tabchangemain('schedule',4)">Schedule</li>
+                    <li class="tab-li {{classe}}" ng-click="tabchangemain('player',5)">Player</li>
+                    <li class="tab-li {{classf}}" ng-click="tabchangemain('notification',6)">Notification</li>
+                </ul>
+            </div>
+        </ion-scroll>
+        <div class="about" ng-show="tab=='about'">
+            <img src="img/news/1.jpg" class="full-image">
+            <div class="item item-divider">
+                <span class="item-note">12 Sep 2015</span>
+                <h2>Inogration New team</h2>
+                <span class="item-note">12.30 pm</span>
+            </div>
+            <div class="content padding">
+                <p> <b>VILLAGE: </b>KANDAGARA</p>
+                <p> <b>RESI.ADDRESS: <br></b>201, DUNHILL VILLA,
+                    <br>BESANT STREET,
+                    <br> SANTACRUZ (WEST),
+                    <br>MUMBAI-400 054.
+                </p>
+                <p><b>CELL NO.:</b> 098200 40804</p>
+                <p><b>BUSINESS:</b> FOUNDER &amp; PROMOTER – TRANSFORMGYM</p>
+                <p>A FASTEST GROWING GYM CHAIN IN INDIA. LEAD BY PROFESSIONALS WITH EXTENSIVE KNOWLEDGE IN THE FITNESS INDUSTRY. OUR GOAL IS TO TRANSFORM THE LIVES OF OUR MEMBERS BY PROVIDING EXPERIENCED PERSONNEL AND CUTTING-EDGE FITNESS EUIPMENT AND TECHNOLOGY, INSPIRING THEM TO ACHIEVE THEIR TRUE POTENTIAL.</p>
+            </div>
+
+        </div>
+        <div class="news" ng-show="tab=='news'">
+            <div class="news-inner">
+                <img src="img/news/1.jpg" class="full-image">
+                <div class="item item-divider">
+                    <span class="item-note">12 Sep 2015</span>
+                    <h2>Inogration New team</h2>
+                    <span class="item-note">12.30 pm</span>
+                </div>
+            </div>
+
+            <!--
+            <div class="gallery-img ">
+                <h5 class="paddleft marzero">Merchant</h5>
+                <ion-slide-box on-slide-changed="slideHasChanged($index)">
+                    <ion-slide ng-repeat="slides in repeatslides">
+                        <div class="row ">
+                            <div class="col col-25 img-holds" ng-repeat="img in slides"><img ng-src="{{img.image}}" class="full-image"></div>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+            </div>
+-->
+        </div>
+        <div class="gallery" ng-show="tab=='gallery'">
+            <!--
+            <div class="tabs-striped tabs-top tabs-background-calm tabs-color-light">
+                <div class="tabs">
+                    <a class="tab-item {{classg}}" ng-click="tabchange('photos',1)">
+                        <span>Photos</span>
+                    </a>
+                    <a class="tab-item {{classh}}" ng-click="tabchange('video',2)">
+                        <span>Video</span>
+                    </a>
+                </div>
+            </div>
+-->
+
+            <div class="tabs-item">
+                <ul class="tab2">
+                    <li class="tab-new {{classg}}" ng-click="tabchange('photos',1)">Photos</li>
+                    <li class="tab-new {{classh}}" ng-click="tabchange('video',2)">Videos</li>
+                </ul>
+            </div>
+            <div class="photos" ng-show="tabs=='photos'">
+                <!--                <ion-gallery ion-gallery-items="gallery" ng-if="gallery.length>0"></ion-gallery>-->
+                <div class="row" ng-repeat="gallery in gallerys">
+                    <div class="col col-33" ng-repeat="gall in gallery">
+                        <div class="magic">
+                            <img ng-src="{{gall.src}}" class="full-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery" ng-show="tabs=='video'">
+                <div class="row">
+                    <div class="col col-33">
+                        <iframe width="100%" height="100" src="https://www.youtube.com/embed/eps0J53sb_w" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col col-33">
+                        <iframe width="100%" height="100" src="https://www.youtube.com/embed/cuw_fmiy3nA" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col col-33">
+                        <iframe width="100%" height="100" src="https://www.youtube.com/embed/oHvSUFmO47U" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="schedule" ng-show="tab=='schedule'">
+            <h2>Coming Soon</h2>
+        </div>
+        <div class="player" ng-show="tab=='player'">
+            <h2>Coming Soon</h2>
+        </div>
+        <div class="notification" ng-show="tab=='notification'">
+            <div class="list notitfy">
+                <div class="item item-divider text-center">
+                    Notification
+                </div>
+                <ion-list>
+                    <div class="padzero event">
+
+                        <div class="all-video list">
+                            <div class="row item" ng-repeat="item in video" ui-sref="app.notidetail">
+                                <div class="col col-33">
+                                    <div class="image-hold" ng-style="{'background-image':'url({{item.image}})'}">
+
+                                    </div>
+                                </div>
+                                <div class="col col-67">
+                                    <h2>{{item.title}}</h2>
+                                    <p>{{item.detail}}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
