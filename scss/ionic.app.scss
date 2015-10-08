@@ -100,3 +100,23 @@ ul.tab2 {
     height: 50px;
     overflow: hidden;
 }
+.padzero{
+    padding: 0px !important;
+}
+
+.image-hold{
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-image: url(../img/notification/1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #ccc;
+    position: relative;
+    left: 10px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
